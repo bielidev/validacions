@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Regístrate</h1>
+        <form onsubmit="validate(event)">
+            <div class="form-row">
+
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nombre *</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+                    <div class="invalid-feedback">
+                        Por favor introduzca su nombre .
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="inputSurnames">Apellidos * </label>
+                    <input type="text" class="form-control" id="inputSurnames" placeholder="Apellidos"> 
+                    <div class="invalid-feedback">
+                        Por favor introduzca sus apellidos.
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="inputEmail">Email *</label>
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Email" >
+                    <div class="invalid-feedback">
+                        Por favor introduzca su email.
+                    </div>
+                  </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Ciudad" >
+                  </div>
+    
+                  <div class="form-group col-md-6">
+                    <label for="inputProvince">Provincia</label>
+                    <select id="inputProvince" class="form-control">
+                      <option selected>Provincia</option>
+                      <option>Álava/Araba</option>
+                      <option>Albacete</option>
+                      <option>Alicante</option>
+                      <option>Almería</option>
+                      <option>Asturias</option>
+                      <option>Ávila</option>
+                      <option>Badajoz</option>
+                      <option>Baleares</option>
+                      <option>Barcelona</option>
+                      <option>Burgos</option>
+                      <option>Cáceres</option>
+                      <option>Cádiz</option>
+                      <option>Cantabria</option>
+                      <option>Castellón</option>
+                      <option>Ceuta</option>
+                      <option>Ciudad Real</option>
+                      <option>Córdoba</option>
+                      <option>Cuenca</option>
+                      <option>Gerona/Girona</option>
+                      <option>Granada</option>
+                      <option>Guadalajara</option>
+                      <option>Guipúzcoa/Gipuzkoa</option>
+                      <option>Huelva</option>
+                      <option>Huesca</option>
+                      <option>Jaén</option>
+                      <option>La Coruña/A Coruña</option>
+                      <option>La Rioja</option>
+                      <option>Las Palmas</option>
+                      <option>León</option>
+                      <option>Lérida/Lleida</option>
+                      <option>Lugo</option>
+                      <option>Madrid</option>
+                      <option>Málaga</option>
+                      <option>Melilla</option>
+                      <option>Murcia</option>
+                      <option>Navarra</option>
+                      <option>Orense/Ourense</option>
+                      <option>Palencia</option>
+                      <option>Pontevedra</option>
+                      <option>Salamanca</option>
+                      <option>Segovia</option>
+                      <option>Sevilla</option>
+                      <option>Soria</option>
+                      <option>Tarragona</option>
+                      <option>Tenerife</option>
+                      <option>Teruel</option>
+                      <option>Toledo</option>
+                      <option>Valencia</option>
+                      <option>Valladolid</option>
+                      <option>Vizcaya/Bizkaia</option>
+                      <option>Zamora</option>
+                      <option>Zaragoza</option>
+                    </select>
+                  </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputPassword">Contraseña *</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="La contraseña debe tener al menos 8 caracteres">
+                    <div class="invalid-feedback">
+                        Por favor introduzca una contraseña válida.
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword2">Vuelve a escribir la contraseña *</label>
+                    <input type="password" class="form-control" id="inputPassword2"><div class="invalid-feedback">
+                        La contraseña no conincide.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                  <label class="form-check-label" for="invalidCheck">
+                    Acepto los términos y condiciones
+                  </label>
+                  <div class="invalid-feedback">
+                    Debe aceptar los términos y condiciones
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="./js/validation.js"></script>
+</body>
+
+</html>
